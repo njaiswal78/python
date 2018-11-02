@@ -26,5 +26,5 @@ while i<lent:
 	if str(u[i])[0]=='h':
 		urllib.urlretrieve(u[i],'image/'+str(i)+'.png')
 	else:
-		urllib.urlretrieve(str(l)+str(u[i]),'image/'+str(i)+'.png')
+		urllib.urlretrieve(str(l)+str(u[i]),str(i)+'.png')
 	i+=1
