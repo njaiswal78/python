@@ -122,12 +122,12 @@ def get_json():
 	,'We can easily forgive a child who is afraid of the dark; the real tragedy of life is when men are afraid of the light. —Plato'
 	,'Nothing will work unless you do. —Maya Angelou'
 	,'“I alone cannot change the world, but I can cast a stone across the water to create many ripples.” —Mother Teresa'
-	,'What we achieve inwardly will change outer reality. —Plutarch']
+	,'What we achieve inwardly will change outer reality. —Plutarch','“If you are on social media, and you are not learning, not laughing, not being inspired or not networking, then you are using it wrong.”','“A huge number of jobs that are filled are never advertised to the public, or if they are, they’re filled by people who have a connection to the employer.” ','“Active participation on LinkedIn is the best way to say, Look at me!, without saying,- Look at me!']
 	#print type(data)
 	#random_numer=n.random.randint(0,len(data))
 	today = datetime.date.today()
 	someday = datetime.date(2018, 11, 20)
-	diff = someday - today
+	diff = today-someday
 	random_numer=diff.days
 	
 	comment_text=data[random_numer]
@@ -145,22 +145,22 @@ def get_json():
 	return json_content
 
 
-if __name__ == "__main__":
+#if __name__ == "__main__":
 	# Get authorization set up and create the OAuth client
-	client = get_auth()
+#	client = get_auth()
 	
 	
 	# Simple profile call, returned in JSON
-	#print "\n********Get the profile in JSON********"
-	#response = make_request(client,"http://api.linkedin.com/v1/people/~",{"x-li-format":'json'})
-	#print response
+#	print "\n********Get the profile in JSON********"
+#	response = make_request(client,"http://api.linkedin.com/v1/people/~",{"x-li-format":'json'})
+#	print response
 	
-	json_content = get_json()
+#	json_content = get_json()
 	
 	
-	print "\n********Write to the share - using JSON********"
-	api_url = "http://api.linkedin.com/v1/people/~/shares";
-	response = make_request(client,api_url,{'Content-Type':'application/json'},"Failed to post share","POST",json_content)
-	exit();
+	#print "\n********Write to the share - using JSON********"
+	#api_url = "http://api.linkedin.com/v1/people/~/shares";
+	#response = make_request(client,api_url,{'Content-Type':'application/json'},"Failed to post share","POST",json_content)#
+#	exit();
 	
 	
